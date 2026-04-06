@@ -1,0 +1,334 @@
+PS C:\AshaYarabati\Code\Python\SmartGlucoseForecast> pwsh ./run_all.ps1
+Requirement already satisfied: pip in .\.venv\Lib\site-packages (26.0.1)
+Requirement already satisfied: pandas in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from -r requirements.txt (line 1)) (3.0.1)
+Requirement already satisfied: numpy in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from -r requirements.txt (line 2)) (2.4.4)
+Requirement already satisfied: scikit-learn in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from -r requirements.txt (line 3)) (1.8.0)
+Requirement already satisfied: statsmodels in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from -r requirements.txt (line 4)) (0.14.6)
+Requirement already satisfied: torch in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from -r requirements.txt (line 5)) (2.11.0)
+Requirement already satisfied: matplotlib in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from -r requirements.txt (line 6)) (3.10.8)
+Requirement already satisfied: python-docx in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from -r requirements.txt (line 7)) (1.2.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from pandas->-r requirements.txt (line 1)) (2.9.0.post0)
+Requirement already satisfied: tzdata in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from pandas->-r requirements.txt (line 1)) (2025.3)
+Requirement already satisfied: scipy>=1.10.0 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from scikit-learn->-r requirements.txt (line 3)) (1.17.1)
+Requirement already satisfied: joblib>=1.3.0 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from scikit-learn->-r requirements.txt (line 3)) (1.5.3)
+Requirement already satisfied: threadpoolctl>=3.2.0 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from scikit-learn->-r requirements.txt (line 3)) (3.6.0)
+Requirement already satisfied: patsy>=0.5.6 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from statsmodels->-r requirements.txt (line 4)) (1.0.2)
+Requirement already satisfied: packaging>=21.3 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from statsmodels->-r requirements.txt (line 4)) (26.0)
+Requirement already satisfied: filelock in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from torch->-r requirements.txt (line 5)) (3.25.2)
+Requirement already satisfied: typing-extensions>=4.10.0 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from torch->-r requirements.txt (line 5)) (4.15.0)
+Requirement already satisfied: setuptools<82 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from torch->-r requirements.txt (line 5)) (81.0.0)
+Requirement already satisfied: sympy>=1.13.3 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from torch->-r requirements.txt (line 5)) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from torch->-r requirements.txt (line 5)) (3.6.1)
+Requirement already satisfied: jinja2 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from torch->-r requirements.txt (line 5)) (3.1.6)
+Requirement already satisfied: fsspec>=0.8.5 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from torch->-r requirements.txt (line 5)) (2026.3.0)
+Requirement already satisfied: contourpy>=1.0.1 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from matplotlib->-r requirements.txt (line 6)) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from matplotlib->-r requirements.txt (line 6)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from matplotlib->-r requirements.txt (line 6)) (4.62.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from matplotlib->-r requirements.txt (line 6)) (1.5.0)
+Requirement already satisfied: pillow>=8 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from matplotlib->-r requirements.txt (line 6)) (12.1.1)
+Requirement already satisfied: pyparsing>=3 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from matplotlib->-r requirements.txt (line 6)) (3.3.2)
+Requirement already satisfied: lxml>=3.1.0 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from python-docx->-r requirements.txt (line 7)) (6.0.2)
+Requirement already satisfied: six>=1.5 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from python-dateutil>=2.8.2->pandas->-r requirements.txt (line 1)) (1.17.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from sympy>=1.13.3->torch->-r requirements.txt (line 5)) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in C:\Dev\VNA\Platform\Python\Glucose Forecast\4 Code\.venv\Lib\site-packages (from jinja2->torch->-r requirements.txt (line 5)) (3.0.3)
+Wrote cleaned data: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\cleaned\cleaned_glucobench.csv | rows=15731 | users=10
+Wrote resampled data: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\resampled\resampled_glucobench_5min.csv | rows=25719 | users=10
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h30\U001.npz | samples=2549 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h60\U001.npz | samples=2543 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h30\U001.npz | samples=2549 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h60\U001.npz | samples=2543 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h30\U002.npz | samples=2549 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h60\U002.npz | samples=2543 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h30\U002.npz | samples=2549 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h60\U002.npz | samples=2543 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h30\U003.npz | samples=2549 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h60\U003.npz | samples=2543 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h30\U003.npz | samples=2549 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h60\U003.npz | samples=2543 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h30\U004.npz | samples=2549 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h60\U004.npz | samples=2543 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h30\U004.npz | samples=2549 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h60\U004.npz | samples=2543 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h30\U005.npz | samples=2548 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h60\U005.npz | samples=2542 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h30\U005.npz | samples=2548 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h60\U005.npz | samples=2542 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h30\U006.npz | samples=2550 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h60\U006.npz | samples=2544 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h30\U006.npz | samples=2550 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h60\U006.npz | samples=2544 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h30\U007.npz | samples=2548 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h60\U007.npz | samples=2542 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h30\U007.npz | samples=2548 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h60\U007.npz | samples=2542 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h30\U008.npz | samples=2549 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h60\U008.npz | samples=2543 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h30\U008.npz | samples=2549 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h60\U008.npz | samples=2543 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h30\U009.npz | samples=2549 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h60\U009.npz | samples=2543 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h30\U009.npz | samples=2549 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h60\U009.npz | samples=2543 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h30\U010.npz | samples=2549 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_only\h60\U010.npz | samples=2543 | features=1
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h30\U010.npz | samples=2549 | features=31
+Wrote windows: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\cgm_context\h60\U010.npz | samples=2543 | features=31
+Wrote manifest: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\windows\windows_manifest.json | entries=40
+Running baselines for cgm_only h30 U001
+Running baselines for cgm_only h30 U002
+Running baselines for cgm_only h30 U003
+Running baselines for cgm_only h30 U004
+Running baselines for cgm_only h30 U005
+Running baselines for cgm_only h30 U006
+Running baselines for cgm_only h30 U007
+Running baselines for cgm_only h30 U008
+Running baselines for cgm_only h30 U009
+Running baselines for cgm_only h30 U010
+Running baselines for cgm_only h60 U001
+Running baselines for cgm_only h60 U002
+Running baselines for cgm_only h60 U003
+Running baselines for cgm_only h60 U004
+Running baselines for cgm_only h60 U005
+Running baselines for cgm_only h60 U006
+Running baselines for cgm_only h60 U007
+Running baselines for cgm_only h60 U008
+Running baselines for cgm_only h60 U009
+Running baselines for cgm_only h60 U010
+Running baselines for cgm_context h30 U001
+Running baselines for cgm_context h30 U002
+Running baselines for cgm_context h30 U003
+Running baselines for cgm_context h30 U004
+Running baselines for cgm_context h30 U005
+Running baselines for cgm_context h30 U006
+Running baselines for cgm_context h30 U007
+Running baselines for cgm_context h30 U008
+Running baselines for cgm_context h30 U009
+Running baselines for cgm_context h30 U010
+Running baselines for cgm_context h60 U001
+Running baselines for cgm_context h60 U002
+Running baselines for cgm_context h60 U003
+Running baselines for cgm_context h60 U004
+Running baselines for cgm_context h60 U005
+Running baselines for cgm_context h60 U006
+Running baselines for cgm_context h60 U007
+Running baselines for cgm_context h60 U008
+Running baselines for cgm_context h60 U009
+Running baselines for cgm_context h60 U010
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\baselines\baseline_results_paper_table.csv
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\baselines\plots\baseline_predictions_cgm_context_h30_U001.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\baselines\plots\baseline_predictions_cgm_context_h30_U002.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\baselines\plots\baseline_predictions_cgm_context_h30_U003.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\baselines\plots\baseline_predictions_cgm_context_h30_U004.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\baselines\plots\baseline_predictions_cgm_context_h30_U005.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\baselines\plots\baseline_predictions_cgm_context_h30_U006.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\baselines\plots\baseline_predictions_cgm_context_h30_U007.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\baselines\plots\baseline_predictions_cgm_context_h30_U008.png
+Training lstm for cgm_only h30 U001
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h30_U001.csv
+Training lstm for cgm_only h30 U002
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h30_U002.csv
+Training lstm for cgm_only h30 U003
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h30_U003.csv
+Training lstm for cgm_only h30 U004
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h30_U004.csv
+Training lstm for cgm_only h30 U005
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h30_U005.csv
+Training lstm for cgm_only h30 U006
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h30_U006.csv
+Training lstm for cgm_only h30 U007
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h30_U007.csv
+Training lstm for cgm_only h30 U008
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h30_U008.csv
+Training lstm for cgm_only h30 U009
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h30_U009.csv
+Training lstm for cgm_only h30 U010
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h30_U010.csv
+Training lstm for cgm_only h60 U001
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h60_U001.csv
+Training lstm for cgm_only h60 U002
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h60_U002.csv
+Training lstm for cgm_only h60 U003
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h60_U003.csv
+Training lstm for cgm_only h60 U004
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h60_U004.csv
+Training lstm for cgm_only h60 U005
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h60_U005.csv
+Training lstm for cgm_only h60 U006
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h60_U006.csv
+Training lstm for cgm_only h60 U007
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h60_U007.csv
+Training lstm for cgm_only h60 U008
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h60_U008.csv
+Training lstm for cgm_only h60 U009
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h60_U009.csv
+Training lstm for cgm_only h60 U010
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_only_h60_U010.csv
+Training lstm for cgm_context h30 U001
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h30_U001.csv
+Training lstm for cgm_context h30 U002
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h30_U002.csv
+Training lstm for cgm_context h30 U003
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h30_U003.csv
+Training lstm for cgm_context h30 U004
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h30_U004.csv
+Training lstm for cgm_context h30 U005
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h30_U005.csv
+Training lstm for cgm_context h30 U006
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h30_U006.csv
+Training lstm for cgm_context h30 U007
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h30_U007.csv
+Training lstm for cgm_context h30 U008
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h30_U008.csv
+Training lstm for cgm_context h30 U009
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h30_U009.csv
+Training lstm for cgm_context h30 U010
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h30_U010.csv
+Training lstm for cgm_context h60 U001
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h60_U001.csv
+Training lstm for cgm_context h60 U002
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h60_U002.csv
+Training lstm for cgm_context h60 U003
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h60_U003.csv
+Training lstm for cgm_context h60 U004
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h60_U004.csv
+Training lstm for cgm_context h60 U005
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h60_U005.csv
+Training lstm for cgm_context h60 U006
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h60_U006.csv
+Training lstm for cgm_context h60 U007
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h60_U007.csv
+Training lstm for cgm_context h60 U008
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h60_U008.csv
+Training lstm for cgm_context h60 U009
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h60_U009.csv
+Training lstm for cgm_context h60 U010
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\lstm_predictions_cgm_context_h60_U010.csv
+Training tcn for cgm_only h30 U001
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h30_U001.csv
+Training tcn for cgm_only h30 U002
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h30_U002.csv
+Training tcn for cgm_only h30 U003
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h30_U003.csv
+Training tcn for cgm_only h30 U004
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h30_U004.csv
+Training tcn for cgm_only h30 U005
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h30_U005.csv
+Training tcn for cgm_only h30 U006
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h30_U006.csv
+Training tcn for cgm_only h30 U007
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h30_U007.csv
+Training tcn for cgm_only h30 U008
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h30_U008.csv
+Training tcn for cgm_only h30 U009
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h30_U009.csv
+Training tcn for cgm_only h30 U010
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h30_U010.csv
+Training tcn for cgm_only h60 U001
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h60_U001.csv
+Training tcn for cgm_only h60 U002
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h60_U002.csv
+Training tcn for cgm_only h60 U003
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h60_U003.csv
+Training tcn for cgm_only h60 U004
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h60_U004.csv
+Training tcn for cgm_only h60 U005
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h60_U005.csv
+Training tcn for cgm_only h60 U006
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h60_U006.csv
+Training tcn for cgm_only h60 U007
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h60_U007.csv
+Training tcn for cgm_only h60 U008
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h60_U008.csv
+Training tcn for cgm_only h60 U009
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h60_U009.csv
+Training tcn for cgm_only h60 U010
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_only_h60_U010.csv
+Training tcn for cgm_context h30 U001
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h30_U001.csv
+Training tcn for cgm_context h30 U002
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h30_U002.csv
+Training tcn for cgm_context h30 U003
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h30_U003.csv
+Training tcn for cgm_context h30 U004
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h30_U004.csv
+Training tcn for cgm_context h30 U005
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h30_U005.csv
+Training tcn for cgm_context h30 U006
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h30_U006.csv
+Training tcn for cgm_context h30 U007
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h30_U007.csv
+Training tcn for cgm_context h30 U008
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h30_U008.csv
+Training tcn for cgm_context h30 U009
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h30_U009.csv
+Training tcn for cgm_context h30 U010
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h30_U010.csv
+Training tcn for cgm_context h60 U001
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h60_U001.csv
+Training tcn for cgm_context h60 U002
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h60_U002.csv
+Training tcn for cgm_context h60 U003
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h60_U003.csv
+Training tcn for cgm_context h60 U004
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h60_U004.csv
+Training tcn for cgm_context h60 U005
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h60_U005.csv
+Training tcn for cgm_context h60 U006
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h60_U006.csv
+Training tcn for cgm_context h60 U007
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h60_U007.csv
+Training tcn for cgm_context h60 U008
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h60_U008.csv
+Training tcn for cgm_context h60 U009
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h60_U009.csv
+Training tcn for cgm_context h60 U010
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\predictions\tcn_predictions_cgm_context_h60_U010.csv
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\deep_results_paper_table_lstm_h30-60.csv
+Wrote C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\deep\deep_results_paper_table_tcn_h30-60.csv
+Wrote merged table: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\merged\merged_results_paper_table.csv
+Wrote Word document: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\word\merged_results_table.docx
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h30\comparison_cgm_only_h30_U001.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h30\comparison_cgm_only_h30_U002.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h30\comparison_cgm_only_h30_U003.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h30\comparison_cgm_only_h30_U004.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h30\comparison_cgm_only_h30_U005.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h30\comparison_cgm_only_h30_U006.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h30\comparison_cgm_only_h30_U007.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h30\comparison_cgm_only_h30_U008.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h30\comparison_cgm_only_h30_U009.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h30\comparison_cgm_only_h30_U010.png
+Wrote overview: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\overview_cgm_only_h30.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h60\comparison_cgm_only_h60_U001.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h60\comparison_cgm_only_h60_U002.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h60\comparison_cgm_only_h60_U003.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h60\comparison_cgm_only_h60_U004.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h60\comparison_cgm_only_h60_U005.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h60\comparison_cgm_only_h60_U006.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h60\comparison_cgm_only_h60_U007.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h60\comparison_cgm_only_h60_U008.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h60\comparison_cgm_only_h60_U009.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_only\h60\comparison_cgm_only_h60_U010.png
+Wrote overview: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\overview_cgm_only_h60.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h30\comparison_cgm_context_h30_U001.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h30\comparison_cgm_context_h30_U002.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h30\comparison_cgm_context_h30_U003.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h30\comparison_cgm_context_h30_U004.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h30\comparison_cgm_context_h30_U005.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h30\comparison_cgm_context_h30_U006.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h30\comparison_cgm_context_h30_U007.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h30\comparison_cgm_context_h30_U008.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h30\comparison_cgm_context_h30_U009.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h30\comparison_cgm_context_h30_U010.png
+Wrote overview: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\overview_cgm_context_h30.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h60\comparison_cgm_context_h60_U001.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h60\comparison_cgm_context_h60_U002.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h60\comparison_cgm_context_h60_U003.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h60\comparison_cgm_context_h60_U004.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h60\comparison_cgm_context_h60_U005.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h60\comparison_cgm_context_h60_U006.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h60\comparison_cgm_context_h60_U007.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h60\comparison_cgm_context_h60_U008.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h60\comparison_cgm_context_h60_U009.png
+Wrote plot: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\cgm_context\h60\comparison_cgm_context_h60_U010.png
+Wrote overview: C:\AshaYarabati\Code\Python\SmartGlucoseForecast\outputs\comparison_plots\overview_cgm_context_h60.png
+PS C:\AshaYarabati\Code\Python\SmartGlucoseForecast>
