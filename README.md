@@ -1,13 +1,13 @@
 ## Overview
 This repository contains the Python implementation for an MSc thesis on personalised short-term glucose forecasting using Continuous Glucose Monitoring (CGM) data and contextual variables.
 
-The project evaluates forecasting performance at **+30 minute** and **+60 minute** prediction horizons using both **CGM-only** and **CGM + context** input configurations.
+The project evaluates forecasting performance at *+30 minute* and *+60 minute* prediction horizons using both *CGM-only* and *CGM + context* input configurations.
 
 ## Author and Project Context:
-Asha Deepthi Yarabati
-MSc Data Science and Artificial Intelligence
-Liverpool John Moores University
-Thesis Title: Smart Glucose Forecasting: A Machine Learning Study Integrating Lifestyle and Sensor Data
+- Asha Deepthi Yarabati
+- MSc Data Science and Artificial Intelligence
+- Liverpool John Moores University
+- Thesis Title: Smart Glucose Forecasting: A Machine Learning Study Integrating Lifestyle and Sensor Data
 
 ## Project Aim
 To build and evaluate a leakage-safe machine learning pipeline for personalised short-term glucose forecasting.
